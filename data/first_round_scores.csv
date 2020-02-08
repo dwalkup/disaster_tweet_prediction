@@ -1,0 +1,28 @@
+Model,Vectorizer,Text_Treatment,Mean_F1_Score,F1_Std_Dev
+LogisticRegression,CountVectorizer,None,0.6290542858178572,0.05930569871502275
+LogisticRegressionCV,CountVectorizer,None,0.6382107580107526,0.05755892959272567
+LogisticRegression,CountVectorizer,Stemmed,0.6282724542006161,0.05454954304699235
+LogisticRegression,CountVectorizer,Lemmatized,0.6377161392519037,0.054316053736676334
+LogisticRegression,CountVectorizer,Removed stopwords,0.5804990476888585,0.07410121362572519
+LogisticRegression,CountVectorizer,"Removed stopwords, stemmed",0.5907999024775348,0.06233658166058654
+LogisticRegression,CountVectorizer,"Removed stopwords, lemmatized",0.5888661506439731,0.06521271412619133
+MultinomialNB,CountVectorizer,None,0.6749567532885051,0.0388777822155517
+MultinomialNB,CountVectorizer,Stemmed,0.679516177528353,0.04514210200517351
+MultinomialNB,CountVectorizer,Lemmatized,0.6838672747769288,0.04188014881745761
+MultinomialNB,CountVectorizer,Removed stopwords,0.6600585905094238,0.04066299988918634
+MultinomialNB,CountVectorizer,"Removed stopwords, stemmed",0.6593484695899581,0.04559206635857508
+MultinomialNB,CountVectorizer,"Removed stopwords, lemmatized",0.6607353953919963,0.04315073975283043
+LogisticRegression,TfidfVectorizer,None,0.661170084735614,0.04248994235989204
+LogisticRegression,TfidfVectorizer,Stemmed,0.6649059406545451,0.045688643692764035
+LogisticRegression,TfidfVectorizer,Lemmatized,0.6675572000390637,0.04109215054227096
+LogisticRegressionCV,TfidfVectorizer,Lemmatized,0.6741968290118585,0.04037677659541278
+LogisticRegression,TfidfVectorizer,Removed stopwords,0.6239710913054827,0.04929118579662498
+LogisticRegression,TfidfVectorizer,"Removed stopwords, stemmed",0.6297679507030749,0.048122300969477526
+LogisticRegression,TfidfVectorizer,"Removed stopwords, lemmatized",0.6309529869872104,0.04725685211221847
+MultinomialNB,TfidfVectorizer,None,0.6554771472834363,0.05697076934045421
+MultinomialNB,TfidfVectorizer,Stemmed,0.6601653543759294,0.06010001540846695
+MultinomialNB,TfidfVectorizer,Lemmatized,0.6617217901213649,0.055086839634722246
+MultinomialNB,TfidfVectorizer,Removed stopwords,0.6478170987485605,0.054678210710489006
+MultinomialNB,TfidfVectorizer,"Removed stopwords, stemmed",0.6466233450531924,0.05253238685817721
+MultinomialNB,TfidfVectorizer,"Removed stopwords, lemmatized",0.6514290195889771,0.05372415943963887
+SVM,TfidfVectorizer,Lemmatized,0.6587775553284982,0.051150000199746234
