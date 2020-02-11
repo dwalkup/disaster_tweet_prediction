@@ -32,13 +32,13 @@ There are 2 subfolders in this repository, "data" and "notebooks."
 * "raw" training data, testing data and sample submission file (train.csv, test.csv, sample_submission.csv)
 * "cleaned" training data (cleaned_train.csv)
 * canonicalized training data (stemmed_train.csv, lemmatized_train.csv)
-* "cleaned" and canonicalized testing data (cleaned.csv)
+* "cleaned" and canonicalized testing data (cleaned_test.csv)
 * predictions for submission to the contest (lr_prediction_submission.csv, mnb_prediction_submission.csv, svc_prediction_submission.csv)
 
 ### The notebooks subfolder contains 3 files:
 * a notebook for data exploration and cleaning (disaster_tweet_data_processing.ipynb)
 * a notebook for modeling experimentation (disaster_tweet_modeling.ipynb)
-* a Python script file containing some helper functions used in the notebooks (helpers.py)
+* a Python script file containing some helper functions used in the data exploration and cleaning notebook (helpers.py)
 
 ## Future Steps
 In order to improve my models, I will continue experimentation to find the optimal hyperparameters for the models I used.
