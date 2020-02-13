@@ -1,13 +1,16 @@
 
 
 import re, nltk, string
+import pandas as pd
+import numpy as np
 from bs4 import BeautifulSoup
 
 def text_cleaner(text):
     '''Cleans tweet text for modeling.
     
-    Changes text to lower case, removes hyperlinks, @users, html tags,
-    punctuation, words with numbers inside them, and numbers.
+    Changes text to lower case.
+    Removes hyperlinks, @users, html tags, punctuation, words with numbers
+    inside them, and numbers.
     
     Args:
         text (string): the text to be cleaned
@@ -59,4 +62,21 @@ def text_normalize(text, stem_it = False, lemmatize_it = False):
         return text
     text = ' '.join(text)
     return text
+
+def model_scoring(score_array):
+    mean_score = np.mean(score_array)
+    stability_score = np.std(score_array)
+    print('Mean score: ', mean_score, '+/-', stability_score)
+    return mean_score, stability_score
+
+def score_recording(score_record, used_model, used_vectorizer, text_treatment,
+                    mean_score, stability_score):
+    upd_score_rec = score_record.copy()
+    score_row = pd.DataFrame.from_dict({'Model' : [used_model],
+                                        'Vectorizer' : [used_vectorizer],
+                                        'Text_Treatment' : [text_treatment],
+                                        'Mean_F1_Score' : [mean_score],
+                                        'F1_Std_Dev' : [stability_score]})
+    upd_score_rec = upd_score_rec.append(score_row, ignore_index = True)
+    return upd_score_rec
 
